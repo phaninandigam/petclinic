@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 script {
-                checkout_build_run.checkout()
+                checkout_build_run.testcheckout()
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
         stage('Build with Maven') {
             steps {
                  script {
-                checkout_build_run.build()
+                checkout_build_run.testbuild()
                 }
             }
         }
@@ -47,7 +47,7 @@ pipeline {
         stage('Run Application') {
             steps {
                 script {
-                checkout_build_run.run()
+                checkout_build_run.testrun()
                 }
             }
         }
